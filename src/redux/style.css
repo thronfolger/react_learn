@@ -1,0 +1,27 @@
+.ReduxExampleApp {
+  margin: 20px;
+}
+
+.Clock {
+  margin-bottom: 20px;
+}
+
+.Clock__time {
+  font-size: 20pt;
+}
+
+.Clock__toggle {
+  margin-top: 10px;
+}
+
+.AddProperty {
+
+}
+
+.AddProperty__field {
+  margin: 10px 0;
+}
+
+.Debug {
+  background: rgba(0, 188, 212, 0.15);
+}
