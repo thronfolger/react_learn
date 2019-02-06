@@ -38,12 +38,16 @@ class Clock extends Component {
 
         let { time } = this.props;
 
+        if (typeof time === "string") {
+          time = new Date(time);
+        }
+
         return (
           <div className="Clock">
             <h2>Часы</h2>
 
-            {/* <div className="Clock__time">{time.toLocaleTimeString()}</div> */}
-            <div className="Clock__time">{this.props.state.main.time.toLocaleTimeString()}</div>
+            {/* <div className="Clock__time">{this.props.state.main.time.toLocaleTimeString()}</div> */}
+            <div className="Clock__time">{time.toLocaleTimeString()}</div>
             <button
               className="Clock__toggle"
               onClick={this.toggleTickIsPause}>Выкл/Вкл часы</button>
@@ -56,13 +60,13 @@ class Clock extends Component {
 
 export function mapStateToProps(state) {
 
-    // return {
-    //     'time': state.main.time
-    // };
-
     return {
-        state: state
+        'time': state.main.time
     };
+
+    // return {
+    //     state: state
+    // };
 
 }
 
