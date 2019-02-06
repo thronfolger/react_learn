@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import AddProperty from './AddProperty';
+import NumberList from './NumberList';
 import Clock from './Clock';
 import Debug from './Debug';
 
@@ -15,6 +16,7 @@ class Container extends Component {
           <div className="Container">
             <Clock />
             <AddProperty />
+            <NumberList />
             <Debug data={state} />
           </div>
         );
